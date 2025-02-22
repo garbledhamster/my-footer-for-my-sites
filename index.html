@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+  />
+  <title>Footer Only</title>
+
+  <!-- Optionally include a monospaced font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* Basic Reset & Font */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: "Roboto Mono", monospace;
+      background-color: #0d0d0d;
+      color: #ffffff;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Pulsing Border Animation */
+    @keyframes pulseBorder {
+      0%   { border-color: #00d1ff; }
+      14.28% { border-color: #c41e3a; }
+      28.56% { border-color: #ffd700; }
+      42.84% { border-color: #ff1493; }
+      57.12% { border-color: #32cd32; }
+      71.4%  { border-color: #8a2be2; }
+      85.68% { border-color: #ffffff; }
+      100%   { border-color: #00d1ff; }
+    }
+
+    /* Footer Container */
+    footer {
+      margin-top: auto; /* Ensures footer stays at the bottom */
+      background-color: #2e2e2e;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      border-top: 3px solid;
+      animation: pulseBorder 28s linear infinite;
+    }
+
+    /* Footer Links */
+    .footer-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-link {
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link i {
+      margin-bottom: 5px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .footer-link:hover {
+      color: #ff4500;
+    }
+  </style>
+
+  <!-- Feather Icons (optional) -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <!-- Just the footer content -->
+  <footer>
+    <ul class="footer-links">
+      <li>
+        <a
+          href="https://www.linkedin.com/in/garbledhamster/"
+          target="_blank"
+          class="footer-link"
+        >
+          <i data-feather="linkedin"></i>
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://buymeacoffee.com/garbledhamster"
+          target="_blank"
+          class="footer-link"
+        >
+          <i data-feather="coffee"></i>
+          Buy Me a Coffee
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/garbledhamster"
+          target="_blank"
+          class="footer-link"
+        >
+          <i data-feather="github"></i>
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://codepen.io/GarbledHamster"
+          target="_blank"
+          class="footer-link"
+        >
+          <i data-feather="codepen"></i>
+          CodePen
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/garbledhamster/"
+          target="_blank"
+          class="footer-link"
+        >
+          <i data-feather="instagram"></i>
+          Instagram
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <script>
+    // Initialize Feather icons
+    feather.replace();
+  </script>
+</body>
+</html>
